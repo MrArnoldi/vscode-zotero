@@ -1,13 +1,13 @@
 {
     "name": "zotero",
     "displayName": "Citation Picker for Zotero",
-    "description": "Zotero Better Bibtex citation picker for VS Code",
-    "version": "0.1.11",
-    "publisher": "mblode",
+    "description": "Zotero Better Bibtex citation picker for VS Code adjusted for Typst",
+    "version": "0.1.12",
+    "publisher": "mrarnoldi",
     "author": {
-        "name": "Matthew Blode",
-        "email": "m@blode.co",
-        "url": "https://matthewblode.com"
+        "name": "Lars Arnold Dethlefsen",
+        "email": "lars.dethelfsen@gmail.com",
+        "url": "https://mrarnoldi.dk"
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",

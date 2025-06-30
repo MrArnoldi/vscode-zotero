@@ -12,7 +12,7 @@ async function showZoteroPicker(): Promise<void> {
   try {
     let result: string = await requestPromise(String(config.port));
     if (config.angleBrackets && result.startsWith('@')) {
-      result = `<${result.substring(1)}>`;
+      result = `#cite(<${result.substring(1)}>)`;
     }
     if (result) {
       const editor = vscode.window.activeTextEditor;
