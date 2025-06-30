@@ -32,7 +32,10 @@ const request_promise_1 = __importDefault(require("request-promise"));
 async function showZoteroPicker() {
     const config = vscode.workspace.getConfiguration('zotero-citation-picker');
     try {
-        const result = await (0, request_promise_1.default)(String(config.port));
+        let result = await (0, request_promise_1.default)(String(config.port));
+        if (config.angleBrackets && result.startsWith('@')) {
+            result = `#cite(<${result.substring(1)}>)`;
+        }
         if (result) {
             const editor = vscode.window.activeTextEditor;
             if (editor) {
