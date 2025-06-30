@@ -3,13 +3,17 @@ import requestPromise from 'request-promise';
 
 interface ZoteroConfig {
   port: number;
+  angleBrackets: boolean;
 }
 
 async function showZoteroPicker(): Promise<void> {
   const config: ZoteroConfig = vscode.workspace.getConfiguration('zotero-citation-picker') as any;
 
   try {
-    const result: string = await requestPromise(String(config.port));
+    let result: string = await requestPromise(String(config.port));
+    if (config.angleBrackets && result.startsWith('@')) {
+      result = `<${result.substring(1)}>`;
+    }
     if (result) {
       const editor = vscode.window.activeTextEditor;
       if (editor) {

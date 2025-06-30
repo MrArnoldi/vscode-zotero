@@ -76,6 +76,11 @@
                     "type": "string",
                     "default": "http://127.0.0.1:23119/better-bibtex/cayw?format=pandoc",
                     "description": "Customise what port/URL will be used for the picker."
+                },
+                "zotero-citation-picker.angleBrackets": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Wrap cite keys in angle brackets, replacing the initial '@'."
                 }
             }
         }

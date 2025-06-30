@@ -18,3 +18,10 @@ If you don't feel like typing citations out (and let's be honest, you don't), ex
 ## Requirements
 
 **IMPORTANT:** Zotero, with Better BibTeX installed, must be running while you use these.
+
+## Configuration
+
+The extension exposes a few settings under `zotero-citation-picker`:
+
+- `port` – URL used to fetch citations from Zotero.
+- `angleBrackets` – when enabled, cite keys that start with `@` are inserted wrapped in angle brackets. For example, `@ref` becomes `<ref>`.
